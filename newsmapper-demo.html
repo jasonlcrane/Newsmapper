@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="description" content="A demo of newsmap.js for displaying Google Spreadsheet data on a Google Map">
+		<title>News map demo</title>
+		<link href="newsmapper-demo.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="header">
+			<h1>A few cool places I've had the good fortune to visit</h1>
+			<p>Return to the <a href="http://jasonlcrane.com/2012/02/creating-google-map-from-spreadsheet/">Newsmapper documentation</a></p>
+		</div>
+		<div id="map-canvas"></div>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="newsmapper.js"></script>
+		<script>
+			newsMapper.init({
+				map: {
+					zoom: 3,
+					center: ['32.305706', '-64.907227']
+				},
+				spreadsheet: {
+					key: '0AmFT0WRsxCoddDNYcExMcmhKVXpBdDY5VUp0SnZOZmc'
+				}
+			});
+		</script>
+	</body>
+</html>
