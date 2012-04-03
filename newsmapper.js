@@ -107,7 +107,7 @@ var newsMapper = (function() {
 		
 		// add a listener for clicks on the marker
 		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.setContent(linkify(content));
+			infowindow.setContent(title + '<br/>' + linkify(content));
 			infowindow.open(map,this);
 		});			
 	}
