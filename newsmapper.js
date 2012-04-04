@@ -28,7 +28,7 @@ var newsMapper = (function() {
 	
 	// linkifies text, used to create links in description content in infowindow
 	var linkify = function(text) {
-		return text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/, function(m) {
+		return text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/ig, function(m) {
 			return m.link(m);
 		});
 	};
